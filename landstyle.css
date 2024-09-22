@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5; 
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+}
+
+.cta-button {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #E64A19;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+main {
+    padding: 20px;
+}
+.about-section{
+    text-align: center;
+}
+
+.about-section,.testimonials-section, .contact-section {
+    margin: 20px 0;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.features-section{
+    margin: 20px 0;
+    padding: 30px;
+    background-color:#686666;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-image, .card-image, .testimonial-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.features-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(30% - 20px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.features-section1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card1 {
+    background-color: #686666;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(30% - 20px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+blockquote {
+    font-style: italic;
+    color: #666;
+    border-left: 3px solid #373737;
+    padding-left: 10px;
+    margin: 20px 0;
+    position: relative;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #373737;
+    color: white;
+    width: 100%;
+}
+.overall-review-section {
+    margin: 20px 0;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.overall-rating {
+    margin-bottom: 20px;
+}
+
+.average-rating {
+    font-size: 2em;
+    color: #FFD700; 
+}
+
+.review-summary {
+    color: #666;
+}
+
+.stars {
+    color: #FFD700; 
+    margin: 5px 0;
+}
+
+.order-now-section {
+    margin: 20px 0;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-image {
+    width: 300px; 
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.order-details {
+    text-align: center;
+}
+
+.product-description {
+    color: #666;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 1.5em;
+    color: #FF5722;
+    margin: 10px 0;
+}
+
+.cta-button {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #E64A19;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

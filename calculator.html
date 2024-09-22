@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calcibox" >
+        <h1>Calculator</h1>
+       
+
+            <input type="text" name="" id="display" style="width: 340px; height: 70px; background-color:darkorchid; color: white; text-align: right;" id=""><br>
+    
+            <input type="btn" type="button" value="1" onclick="appendValue('1')"readonly>
+            <input type="btn" type="button" value="2" onclick="appendValue('2')"readonly>
+            <input type="btn" type="button" value="3" onclick="appendValue('3')"readonly>
+
+            <input type="btn" type="button" value="+" class="operator" onclick="appendValue('+')" style="background-color: fuchsia;" readonly><br>
+            
+            <input type="btn" type="button" value="4" onclick="appendValue('4')"readonly>
+            <input type="btn" type="button" value="5" onclick="appendValue('5')"readonly>
+            <input type="btn" type="button" value="6" onclick="appendValue('6')"readonly>
+            
+            <input type="btn" type="button" value="-" class="operator" onclick="appendValue('-')" style="background-color: fuchsia;"readonly><br>
+            
+            <input type="btn" type="button" value="7" onclick="appendValue('7')"readonly>
+            <input type="btn" type="button" value="8" onclick="appendValue('8')"readonly>
+            <input type="btn" type="button" value="9" onclick="appendValue('9')"readonly>
+           
+            <input type="btn" type="button" value="x" class="operator" onclick="appendValue('*')" style="background-color: fuchsia;"readonly><br>
+           
+            <input type="btn" type="button" value="0" onclick="appendValue('0')"readonly>
+            <input type="btn" type="button" value="00" onclick="appendValue('00')"readonly>
+            <input type="btn" type="button" value="." onclick="appendValue('.')"readonly>
+            
+            <input type="btn" type="button" value="/" class="operator" onclick="appendValue('/')" style="background-color: fuchsia;"readonly>
+            
+            <input type="btn" type="button" value="=" class="equals" onclick="calculate()"readonly>
+            <input type="btn" type="button" value="del" class="delete" onclick="del()" style="background-color: darkorchid;">
+            <input type="btn" type="button" value="AC" class="clear" onclick="clearDisplay()" style="background-color:darkorchid;"readonly>
+
+            <input type="btn" type="button" value="%" class="operator" onclick="appendValue('%')" style="background-color: fuchsia;" readonly><br>
+
+       
+    </div>
+    
+    <script>
+        function appendValue(value) {
+            const display = document.getElementById("display");
+            if (display.value === '0' || display.value === 'Error') {
+                display.value = value;
+            } else {
+                display.value += value;
+            }
+        }
+
+        function clearDisplay() {
+            document.getElementById("display").value = '0';
+        }
+        function del() {
+            const display = document.getElementById("display");
+            display.value = display.value.slice(0, -1);
+        } 
+
+        function calculate() {
+            const display = document.getElementById("display");
+            try {
+                    let expression = display.value;
+                    expression = expression.replace(/%/g, '/100'); 
+                    display.value = eval(expression);
+                } catch (error) {
+                    display.value = 'Error';
+                    setTimeout(clearDisplay, 1500);
+    }
+        }
+
+    </script>
+</body>
+</html>
